@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A936E1E28D377C200C6065B /* deepaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A936E1D28D377C200C6065B /* deepaApp.swift */; };
+		5A936E2028D377C200C6065B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A936E1F28D377C200C6065B /* ContentView.swift */; };
+		5A936E2228D377C300C6065B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A936E2128D377C300C6065B /* Assets.xcassets */; };
+		5A936E2628D377C300C6065B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A936E2528D377C300C6065B /* Preview Assets.xcassets */; };
+		5A936E3028D377C300C6065B /* deepaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A936E2F28D377C300C6065B /* deepaTests.swift */; };
+		5A936E3A28D377C300C6065B /* deepaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A936E3928D377C300C6065B /* deepaUITests.swift */; };
+		5A936E3C28D377C300C6065B /* deepaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A936E3B28D377C300C6065B /* deepaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A936E2C28D377C300C6065B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A936E1228D377C200C6065B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A936E1928D377C200C6065B;
+			remoteInfo = deepa;
+		};
+		5A936E3628D377C300C6065B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A936E1228D377C200C6065B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A936E1928D377C200C6065B;
+			remoteInfo = deepa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A936E1A28D377C200C6065B /* deepa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deepa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A936E1D28D377C200C6065B /* deepaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deepaApp.swift; sourceTree = "<group>"; };
+		5A936E1F28D377C200C6065B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5A936E2128D377C300C6065B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A936E2328D377C300C6065B /* deepa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = deepa.entitlements; sourceTree = "<group>"; };
+		5A936E2528D377C300C6065B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5A936E2B28D377C300C6065B /* deepaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deepaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A936E2F28D377C300C6065B /* deepaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deepaTests.swift; sourceTree = "<group>"; };
+		5A936E3528D377C300C6065B /* deepaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deepaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A936E3928D377C300C6065B /* deepaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deepaUITests.swift; sourceTree = "<group>"; };
+		5A936E3B28D377C300C6065B /* deepaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deepaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A936E1728D377C200C6065B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A936E2828D377C300C6065B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A936E3228D377C300C6065B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A936E1128D377C200C6065B = {
+			isa = PBXGroup;
+			children = (
+				5A936E1C28D377C200C6065B /* deepa */,
+				5A936E2E28D377C300C6065B /* deepaTests */,
+				5A936E3828D377C300C6065B /* deepaUITests */,
+				5A936E1B28D377C200C6065B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A936E1B28D377C200C6065B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A936E1A28D377C200C6065B /* deepa.app */,
+				5A936E2B28D377C300C6065B /* deepaTests.xctest */,
+				5A936E3528D377C300C6065B /* deepaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A936E1C28D377C200C6065B /* deepa */ = {
+			isa = PBXGroup;
+			children = (
+				5A936E1D28D377C200C6065B /* deepaApp.swift */,
+				5A936E1F28D377C200C6065B /* ContentView.swift */,
+				5A936E2128D377C300C6065B /* Assets.xcassets */,
+				5A936E2328D377C300C6065B /* deepa.entitlements */,
+				5A936E2428D377C300C6065B /* Preview Content */,
+			);
+			path = deepa;
+			sourceTree = "<group>";
+		};
+		5A936E2428D377C300C6065B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5A936E2528D377C300C6065B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5A936E2E28D377C300C6065B /* deepaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A936E2F28D377C300C6065B /* deepaTests.swift */,
+			);
+			path = deepaTests;
+			sourceTree = "<group>";
+		};
+		5A936E3828D377C300C6065B /* deepaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A936E3928D377C300C6065B /* deepaUITests.swift */,
+				5A936E3B28D377C300C6065B /* deepaUITestsLaunchTests.swift */,
+			);
+			path = deepaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A936E1928D377C200C6065B /* deepa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A936E3F28D377C300C6065B /* Build configuration list for PBXNativeTarget "deepa" */;
+			buildPhases = (
+				5A936E1628D377C200C6065B /* Sources */,
+				5A936E1728D377C200C6065B /* Frameworks */,
+				5A936E1828D377C200C6065B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = deepa;
+			productName = deepa;
+			productReference = 5A936E1A28D377C200C6065B /* deepa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A936E2A28D377C300C6065B /* deepaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A936E4228D377C300C6065B /* Build configuration list for PBXNativeTarget "deepaTests" */;
+			buildPhases = (
+				5A936E2728D377C300C6065B /* Sources */,
+				5A936E2828D377C300C6065B /* Frameworks */,
+				5A936E2928D377C300C6065B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A936E2D28D377C300C6065B /* PBXTargetDependency */,
+			);
+			name = deepaTests;
+			productName = deepaTests;
+			productReference = 5A936E2B28D377C300C6065B /* deepaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A936E3428D377C300C6065B /* deepaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A936E4528D377C300C6065B /* Build configuration list for PBXNativeTarget "deepaUITests" */;
+			buildPhases = (
+				5A936E3128D377C300C6065B /* Sources */,
+				5A936E3228D377C300C6065B /* Frameworks */,
+				5A936E3328D377C300C6065B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A936E3728D377C300C6065B /* PBXTargetDependency */,
+			);
+			name = deepaUITests;
+			productName = deepaUITests;
+			productReference = 5A936E3528D377C300C6065B /* deepaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A936E1228D377C200C6065B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					5A936E1928D377C200C6065B = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					5A936E2A28D377C300C6065B = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 5A936E1928D377C200C6065B;
+					};
+					5A936E3428D377C300C6065B = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 5A936E1928D377C200C6065B;
+					};
+				};
+			};
+			buildConfigurationList = 5A936E1528D377C200C6065B /* Build configuration list for PBXProject "deepa" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A936E1128D377C200C6065B;
+			productRefGroup = 5A936E1B28D377C200C6065B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A936E1928D377C200C6065B /* deepa */,
+				5A936E2A28D377C300C6065B /* deepaTests */,
+				5A936E3428D377C300C6065B /* deepaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A936E1828D377C200C6065B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A936E2628D377C300C6065B /* Preview Assets.xcassets in Resources */,
+				5A936E2228D377C300C6065B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A936E2928D377C300C6065B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A936E3328D377C300C6065B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A936E1628D377C200C6065B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A936E2028D377C200C6065B /* ContentView.swift in Sources */,
+				5A936E1E28D377C200C6065B /* deepaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A936E2728D377C300C6065B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A936E3028D377C300C6065B /* deepaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A936E3128D377C300C6065B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A936E3C28D377C300C6065B /* deepaUITestsLaunchTests.swift in Sources */,
+				5A936E3A28D377C300C6065B /* deepaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A936E2D28D377C300C6065B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A936E1928D377C200C6065B /* deepa */;
+			targetProxy = 5A936E2C28D377C300C6065B /* PBXContainerItemProxy */;
+		};
+		5A936E3728D377C300C6065B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A936E1928D377C200C6065B /* deepa */;
+			targetProxy = 5A936E3628D377C300C6065B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5A936E3D28D377C300C6065B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A936E3E28D377C300C6065B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5A936E4028D377C300C6065B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = deepa/deepa.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"deepa/Preview Content\"";
+				DEVELOPMENT_TEAM = X8ZFLUE894;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niveumlabs.deepa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A936E4128D377C300C6065B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = deepa/deepa.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"deepa/Preview Content\"";
+				DEVELOPMENT_TEAM = X8ZFLUE894;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niveumlabs.deepa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A936E4328D377C300C6065B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8ZFLUE894;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niveumlabs.deepaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/deepa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/deepa";
+			};
+			name = Debug;
+		};
+		5A936E4428D377C300C6065B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8ZFLUE894;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niveumlabs.deepaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/deepa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/deepa";
+			};
+			name = Release;
+		};
+		5A936E4628D377C300C6065B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8ZFLUE894;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niveumlabs.deepaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = deepa;
+			};
+			name = Debug;
+		};
+		5A936E4728D377C300C6065B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X8ZFLUE894;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niveumlabs.deepaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = deepa;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A936E1528D377C200C6065B /* Build configuration list for PBXProject "deepa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A936E3D28D377C300C6065B /* Debug */,
+				5A936E3E28D377C300C6065B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A936E3F28D377C300C6065B /* Build configuration list for PBXNativeTarget "deepa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A936E4028D377C300C6065B /* Debug */,
+				5A936E4128D377C300C6065B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A936E4228D377C300C6065B /* Build configuration list for PBXNativeTarget "deepaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A936E4328D377C300C6065B /* Debug */,
+				5A936E4428D377C300C6065B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A936E4528D377C300C6065B /* Build configuration list for PBXNativeTarget "deepaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A936E4628D377C300C6065B /* Debug */,
+				5A936E4728D377C300C6065B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A936E1228D377C200C6065B /* Project object */;
+}
