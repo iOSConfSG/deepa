@@ -1,0 +1,23 @@
+subscription GetSchedule {
+  schedule {
+    id
+    activity
+    title
+    start_at
+    end_at
+    talk_type
+    talk_description
+    speakers {
+      id
+      name
+      company
+      company_url
+      image_url
+      image_filename
+      twitter
+      linkedin_url
+      short_bio
+    }
+  }
+}
+
