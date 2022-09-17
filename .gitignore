@@ -1,0 +1,25 @@
+## User settings
+xcuserdata/
+xcschememanagement.plist
+
+# Build generated
+build/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+.build/
+
+# Other
+.DS_Store
+*.xcuserstate
+OneSignal-Info.plist
+node_modules
+ApolloCLI
