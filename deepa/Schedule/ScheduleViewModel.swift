@@ -21,11 +21,11 @@ class ScheduleViewModel: ObservableObject {
     }()
     
     init(failInitClosure: @escaping (()-> Void)) {
-        guard let connection = NetworkManager.shared.apolloClient else {
-            failInitClosure()
-            return
-        }
-        self.apollo = connection
+//        guard let connection = NetworkManager.shared.client else {
+//            failInitClosure()
+//            return
+//        }
+        self.apollo = NetworkManager.shared.client
     }
     
     func fetchSchedule() {
@@ -72,7 +72,7 @@ class ScheduleViewModel: ObservableObject {
                             speakers: speakers)
             self.schedule.append(talk)
             
-            print(self.schedule)
+             print(self.schedule)
         }
     }
     

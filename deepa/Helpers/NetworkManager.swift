@@ -13,27 +13,32 @@ class NetworkManager {
     static let shared = NetworkManager()
     let httpsEndpoint = "https://iosconfsg.herokuapp.com/v1/graphql"
     let wsEndpoint = "ws://iosconfsg.herokuapp.com/v1/graphql"
-    var apolloClient: ApolloClient?
     
-    private init() {
-        createApolloClient()
-    }
+    /// A web socket transport to use for subscriptions
+    private lazy var webSocketTransport: WebSocketTransport = {
+        let url = URL(string: wsEndpoint)!
+        let webSocketClient = WebSocket(url: url, protocol: .graphql_transport_ws)
+        return WebSocketTransport(websocket: webSocketClient)
+    }()
     
-    func createApolloClient() {
-        self.apolloClient = {            
-            guard let wsEndpointUrl = URL(string: wsEndpoint) else { return nil }
-            guard let httpsEndpointUrl = URL(string: httpsEndpoint) else { return nil}
-            
-            let websocket = WebSocket(url: wsEndpointUrl, protocol: .graphql_transport_ws)
-            let websocketTransport = WebSocketTransport(websocket: websocket)
-            
-            let store = ApolloStore(cache: InMemoryNormalizedCache())
-            
-            let provider = DefaultInterceptorProvider(store: store)
-            let httpNetworkTransport = RequestChainNetworkTransport(interceptorProvider: provider, endpointURL: httpsEndpointUrl)
-            let splitNetworkTransport = SplitNetworkTransport(uploadingNetworkTransport: httpNetworkTransport, webSocketNetworkTransport: websocketTransport)
-            
-            return ApolloClient(networkTransport: splitNetworkTransport, store: store)
-        }()
-    }
+    /// An HTTP transport to use for queries and mutations
+    
+    private lazy var normalTransport: RequestChainNetworkTransport = {
+        let url = URL(string: httpsEndpoint)!
+        return RequestChainNetworkTransport(interceptorProvider: DefaultInterceptorProvider(store: self.store), endpointURL: url)
+    }()
+    
+    
+    /// A split network transport to allow the use of both of the above
+    /// transports through a single `NetworkTransport` instance.
+    private lazy var splitNetworkTransport = SplitNetworkTransport(
+        uploadingNetworkTransport: self.normalTransport,
+        webSocketNetworkTransport: self.webSocketTransport
+    )
+    
+    /// Create a client using the `SplitNetworkTransport`.
+    private(set) lazy var client = ApolloClient(networkTransport: self.splitNetworkTransport, store: self.store)
+    
+    /// A common store to use for `normalTransport` and `client`.
+    private lazy var store = ApolloStore()
 }
