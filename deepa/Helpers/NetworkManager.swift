@@ -24,8 +24,7 @@ class NetworkManager {
             guard let wsEndpointUrl = URL(string: wsEndpoint) else { return nil }
             guard let httpsEndpointUrl = URL(string: httpsEndpoint) else { return nil}
             
-            let request = URLRequest(url: wsEndpointUrl)
-            let websocket = WebSocket(request: request, protocol: .graphql_transport_ws)
+            let websocket = WebSocket(url: wsEndpointUrl, protocol: .graphql_transport_ws)
             let websocketTransport = WebSocketTransport(websocket: websocket)
             
             let store = ApolloStore(cache: InMemoryNormalizedCache())
@@ -35,7 +34,6 @@ class NetworkManager {
             let splitNetworkTransport = SplitNetworkTransport(uploadingNetworkTransport: httpNetworkTransport, webSocketNetworkTransport: websocketTransport)
             
             return ApolloClient(networkTransport: splitNetworkTransport, store: store)
-            
         }()
     }
 }

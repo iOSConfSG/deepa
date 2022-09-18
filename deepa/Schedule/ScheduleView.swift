@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct ScheduleView: View {
+    
+    @StateObject var viewModel: ScheduleViewModel
+    
+    init() {
+        let viewModel = ScheduleViewModel {
+            print("fail init")
+        }
+        _viewModel = StateObject(wrappedValue: viewModel)
+        
+    }
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +27,13 @@ struct ScheduleView: View {
             Text("Schedule!")
         }
         .padding()
+        .onAppear {
+            viewModel.fetchSchedule()
+        }
+    }
+    
+    func handleGraphqlError() {
+        
     }
 }
 
