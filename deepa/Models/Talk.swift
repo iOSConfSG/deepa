@@ -23,7 +23,7 @@ public enum TalkType: String {
     case combinedTalk
 }
 
-struct Talk {
+struct Talk: Identifiable {
     var id: Int
     var title: String
     var talkType: TalkType
