@@ -31,12 +31,6 @@ struct ScheduleView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Picker("Schedule", selection: $schedulePicker) {
-                    Text("Day 1").tag(0)
-                    Text("Day 2").tag(1)
-                }
-                .pickerStyle(.segmented)
-                .padding(.horizontal)
                 
                 if schedulePicker == 0 {
                     List {
@@ -67,6 +61,15 @@ struct ScheduleView: View {
                 Spacer()
                 
             }.navigationTitle("Schedule")
+                .toolbar {
+                    ToolbarItem(placement: .automatic) {
+                        Picker("Schedule", selection: $schedulePicker) {
+                            Text("Day 1").tag(0)
+                            Text("Day 2").tag(1)
+                        }
+                        .pickerStyle(.segmented)
+                    }
+                }
         }
         .onAppear {
             viewModel.fetchSchedule()
@@ -75,26 +78,6 @@ struct ScheduleView: View {
     
     func handleGraphqlError() {
         
-    }
-}
-
-extension View {
-    func concatSpeakerName(speakers: Array<Speaker>, requireCompany: Bool) -> String {
-        if requireCompany {
-            var speakersList: Array<String> = []
-            for speaker in speakers {
-                speakersList.append("\(speaker.name) (\(speaker.company ?? ""))")
-            }
-            let speakers = speakersList.joined(separator: " & ")
-            return speakers
-        } else {
-            var speakersList: Array<String> = []
-            for speaker in speakers {
-                speakersList.append(speaker.name)
-            }
-            let speakers = speakersList.joined(separator: " & ")
-            return speakers
-        }
     }
 }
 
@@ -112,19 +95,14 @@ struct ListContent: View {
     
     var body: some View {
         HStack {
-            if speakers.count > 1 {
-                Circle()
-                    .frame(width: 80)
-            } else {
-                AsyncImage(url: URL(string: speakers[0].imageUrl ?? ""))
-                    .frame(width: 80, height: 80)
-            }
+            SpeakersImage(speakers: speakers)
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(.orange)
+                
                 if speakers.count == 1 {
                     Text(speakers[0].name)
                         .font(.subheadline)
@@ -144,8 +122,32 @@ struct ListContent: View {
     }
 }
 
-struct ScheduleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScheduleView()
+extension View {
+    func concatSpeakerName(speakers: Array<Speaker>, requireCompany: Bool) -> String {
+        var speakersList: Array<String> = []
+        if requireCompany {
+            for speaker in speakers {
+                speakersList.append("\(speaker.name) (\(speaker.company ?? ""))")
+            }
+        } else {
+            for speaker in speakers {
+                speakersList.append(speaker.name)
+            }
+        }
+        let speakers = speakersList.joined(separator: " & ")
+        return speakers
+    }
+    
+    func getURL2022(speakerImageURL: String) -> String {
+        if speakerImageURL.count > 0 {
+            var url = speakerImageURL
+            for (index, char) in "2022.".enumerated() {
+                var i = url.index(url.startIndex, offsetBy: index+8)
+                url.insert(char, at: i)
+            }
+            return url
+        } else {
+            return ""
+        }
     }
 }

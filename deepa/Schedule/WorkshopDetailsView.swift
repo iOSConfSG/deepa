@@ -30,13 +30,7 @@ struct WorkshopDetailsView: View {
                         .font(.subheadline)
                     
                     HStack {
-                        if speakers.count > 1 {
-                            Circle()
-                                .frame(width: 80)
-                        } else {
-                            AsyncImage(url: URL(string: speakers[0].imageUrl ?? ""))
-                                .frame(width: 80, height: 80)
-                        }
+                        SpeakersImage(speakers: speakers)
                         
                         VStack(alignment: .leading, spacing: 2) {
                             if speakers.count == 1 {
@@ -56,8 +50,6 @@ struct WorkshopDetailsView: View {
                                     }
                                 }
                             }
-                            
-                            
                         }
                         Spacer()
                     }
@@ -67,9 +59,34 @@ struct WorkshopDetailsView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding()
-                    .background(.white)
+                .background(Color(UIColor.systemBackground))
                 Spacer()
             }
         }.navigationBarTitle(title)
+    }
+}
+
+struct SpeakersImage: View {
+    @State var speakers: Array<Speaker>
+    
+    var body: some View {
+        if speakers.count > 1 {
+            Rectangle()
+               .frame(width: 80, height: 80)
+               .background(.gray)
+               .cornerRadius(6)
+        } else {
+            AsyncImage(url: URL(string: getURL2022(speakerImageURL: speakers[0].imageUrl ?? ""))) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            } placeholder: {
+                 Rectangle()
+                    .frame(width: 80, height: 80)
+                    .background(.gray)
+            }
+            .frame(width: 80, height: 80)
+            .cornerRadius(6)
+        }
     }
 }
