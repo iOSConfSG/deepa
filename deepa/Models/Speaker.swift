@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Speaker {
+struct Speaker: Identifiable {
     var id: Int
     var name: String
     var shortBio: String?
