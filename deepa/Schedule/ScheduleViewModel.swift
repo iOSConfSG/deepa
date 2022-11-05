@@ -12,7 +12,7 @@ class ScheduleViewModel: ObservableObject {
     private var apollo: ApolloClient!
     private var subscription: Cancellable?
     private var graphql: [GetScheduleSubscription.Data.Schedule] = []
-    private var schedule: [Talk] = []
+    @Published var schedule: [Talk] = []
     
     let dateFormatter: DateFormatter = {
         let df = DateFormatter()

@@ -27,6 +27,7 @@
 		5A936E6A28D5AF4100C6065B /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A936E6928D5AF4100C6065B /* NewsView.swift */; };
 		5A936E6D28D6144200C6065B /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A936E6C28D6144200C6065B /* Talk.swift */; };
 		5A936E6F28D6148600C6065B /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A936E6E28D6148600C6065B /* Speaker.swift */; };
+		972E5C1C2913D0AF0021AEF2 /* WorkshopDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E5C1B2913D0AF0021AEF2 /* WorkshopDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		5A936E6C28D6144200C6065B /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		5A936E6E28D6148600C6065B /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		5A936E7328D623F500C6065B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		972E5C1B2913D0AF0021AEF2 /* WorkshopDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			children = (
 				5A936E5D28D5ADDC00C6065B /* ScheduleView.swift */,
 				5A936E5F28D5ADE700C6065B /* ScheduleViewModel.swift */,
+				972E5C1B2913D0AF0021AEF2 /* WorkshopDetailsView.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				5A936E6828D5AF2900C6065B /* InfoView.swift in Sources */,
 				5A936E5E28D5ADDC00C6065B /* ScheduleView.swift in Sources */,
+				972E5C1C2913D0AF0021AEF2 /* WorkshopDetailsView.swift in Sources */,
 				5A936E5628D5974900C6065B /* NetworkManager.swift in Sources */,
 				5A936E6D28D6144200C6065B /* Talk.swift in Sources */,
 				5A936E6A28D5AF4100C6065B /* NewsView.swift in Sources */,
@@ -546,11 +550,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"deepa/Preview Content\"";
-				DEVELOPMENT_TEAM = X8ZFLUE894;
+				DEVELOPMENT_TEAM = Z7X6647APW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = deepa/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Atlantis would use Bonjour Service to discover Proxyman app from your local network.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -566,7 +571,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.niveumlabs.deepa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.donchia.deepa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -585,11 +590,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"deepa/Preview Content\"";
-				DEVELOPMENT_TEAM = X8ZFLUE894;
+				DEVELOPMENT_TEAM = Z7X6647APW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = deepa/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Atlantis would use Bonjour Service to discover Proxyman app from your local network.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -605,7 +611,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.niveumlabs.deepa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.donchia.deepa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

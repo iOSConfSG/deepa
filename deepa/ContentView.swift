@@ -16,7 +16,7 @@ struct ContentView: View {
                 }
             WorkshopView()
                 .tabItem {
-                    Label("Workshop", systemImage: "laptopcomputer")
+                    Label("Workshop", systemImage: "swift")
                 }
             NewsView()
                 .tabItem {
