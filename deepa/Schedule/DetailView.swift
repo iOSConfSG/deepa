@@ -13,7 +13,7 @@ struct DetailView: View {
     @State var presentFeedbackSheet: Bool = false
     
     @State var comment: String = ""
-    @State var rating: Int = 0
+    @State var ratings: Int = 0
     
     static let dateFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -73,37 +73,46 @@ struct DetailView: View {
                 }
             }
             .sheet(isPresented: $presentFeedbackSheet) {
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("What do you think of this talk?")
-                        .fontWeight(.bold)
-                    HStack {
-                        Circle()
-                            .frame(width: 30)
-                        Circle()
-                            .frame(width: 30)
-                        Circle()
-                            .frame(width: 30)
-                        Circle()
-                            .frame(width: 30)
-                        Circle()
-                            .frame(width: 30)
-                    }
-                    TextEditor(text: $comment)
-                        .border(.gray)
-                    Button {
-                        
-                    } label: {
-                        Text("Submit")
-                            .frame(maxWidth: .infinity)
-                    }
-                    .tint(.orange)
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
-                    .cornerRadius(6)
-                }
-                .presentationDetents([.medium])
-                .padding()
+                FeedbackForm(comment: comment, ratings: ratings)
             }
+    }
+}
+
+struct FeedbackForm: View {
+    
+    @State var comment: String
+    @State var ratings: Int
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("What do you think of this talk?")
+                .fontWeight(.bold)
+            HStack {
+                ForEach(1...5, id: \.self) { i in
+                    Image(systemName: "star.fill")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(i <= self.ratings ? .orange : Color.primary)
+                        .onTapGesture(perform: {
+                            self.ratings = i
+                        })
+                }
+            }
+            TextEditor(text: $comment)
+                .border(.gray)
+            Button {
+                
+            } label: {
+                Text("Submit")
+                    .frame(maxWidth: .infinity)
+            }
+            .tint(.orange)
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+            .cornerRadius(6)
+        }
+        .presentationDetents([.medium])
+        .padding()
     }
 }
 
