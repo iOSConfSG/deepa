@@ -34,11 +34,11 @@ struct ScheduleView: View {
                 
                 if schedulePicker == 0 {
                     List {
-                        ForEach(viewModel.schedule) { information in
-                            if Self.extractDate.string(from: information.startAt ?? Date.now) == "20/01/2022" {
+                        ForEach(viewModel.schedule) { talk in
+                            if Self.extractDate.string(from: talk.startAt ?? Date.now) == "20/01/2022" {
                                 VStack {
-                                    NavigationLink(destination: WorkshopDetailsView(title: information.title, startAt: information.startAt ?? Date.now, endAt: information.endAt ?? Date.now, talkDescription: information.talkDescription ?? "", activityName: information.activityName ?? "", speakers: information.speakers)) {
-                                        ListContent(title: information.title, speakers: information.speakers, startAt: information.startAt ?? Date.now, endAt: information.endAt ?? Date.now)
+                                    NavigationLink(destination: DetailView(talk: talk)) {
+                                        TalkContent(talk: talk)
                                     }
                                 }
                             }
@@ -46,11 +46,11 @@ struct ScheduleView: View {
                     }.listStyle(.plain)
                 } else {
                     List {
-                        ForEach(viewModel.schedule) { information in
-                            if Self.extractDate.string(from: information.startAt ?? Date.now) == "21/01/2022" {
+                        ForEach(viewModel.schedule) { talk in
+                            if Self.extractDate.string(from: talk.startAt ?? Date.now) == "21/01/2022" {
                                 VStack {
-                                    NavigationLink(destination: WorkshopDetailsView(title: information.title, startAt: information.startAt ?? Date.now, endAt: information.endAt ?? Date.now, talkDescription: information.talkDescription ?? "", activityName: information.activityName ?? "", speakers: information.speakers)) {
-                                        ListContent(title: information.title, speakers: information.speakers, startAt: information.startAt ?? Date.now, endAt: information.endAt ?? Date.now)
+                                    NavigationLink(destination: DetailView(talk: talk)) {
+                                        TalkContent(talk: talk)
                                     }
                                 }
                             }
@@ -81,11 +81,8 @@ struct ScheduleView: View {
     }
 }
 
-struct ListContent: View {
-    @State var title: String
-    @State var speakers: Array<Speaker>
-    @State var startAt: Date
-    @State var endAt: Date
+struct TalkContent: View {
+    @State var talk: Talk
     
     static let dateFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -95,26 +92,26 @@ struct ListContent: View {
     
     var body: some View {
         HStack {
-            SpeakersImage(speakers: speakers)
+            SpeakersImage(speakers: talk.speakers)
             
             VStack(alignment: .leading, spacing: 2) {
-                Text(title)
+                Text(talk.title)
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(.orange)
                 
-                if speakers.count == 1 {
-                    Text(speakers[0].name)
+                if talk.speakers.count == 1 {
+                    Text(talk.speakers[0].name)
                         .font(.subheadline)
                 } else {
-                    Text(concatSpeakerName(speakers: speakers, requireCompany: false))
+                    Text(concatSpeakerName(speakers: talk.speakers, requireCompany: false))
                         .font(.subheadline)
                 }
                 
                 HStack(spacing: 0) {
-                    Text(startAt, formatter: Self.dateFormat)
+                    Text(talk.startAt ?? Date.now, formatter: Self.dateFormat)
                     Text(" - ")
-                    Text(endAt, formatter: Self.dateFormat)
+                    Text(talk.endAt ?? Date.now, formatter: Self.dateFormat)
                 }.font(.caption)
                     .fontWeight(.light)
             }
@@ -136,18 +133,5 @@ extension View {
         }
         let speakers = speakersList.joined(separator: " & ")
         return speakers
-    }
-    
-    func getURL2022(speakerImageURL: String) -> String {
-        if speakerImageURL.count > 0 {
-            var url = speakerImageURL
-            for (index, char) in "2022.".enumerated() {
-                var i = url.index(url.startIndex, offsetBy: index+8)
-                url.insert(char, at: i)
-            }
-            return url
-        } else {
-            return ""
-        }
     }
 }

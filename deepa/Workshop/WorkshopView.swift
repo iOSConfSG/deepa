@@ -32,11 +32,11 @@ struct WorkshopView: View {
                 
                 if schedulePicker == 0 {
                     List {
-                        ForEach(viewModel.schedule) { information in
-                            if Self.extractDate.string(from: information.startAt ?? Date.now) == "17/01/2022" {
+                        ForEach(viewModel.schedule) { talk in
+                            if Self.extractDate.string(from: talk.startAt ?? Date.now) == "17/01/2022" {
                                 VStack {
-                                    NavigationLink(destination: WorkshopDetailsView(title: information.title, startAt: information.startAt ?? Date.now, endAt: information.endAt ?? Date.now, talkDescription: information.talkDescription ?? "", activityName: information.activityName ?? "", speakers: information.speakers)) {
-                                        ListContent(title: information.title, speakers: information.speakers, startAt: information.startAt ?? Date.now, endAt: information.endAt ?? Date.now)
+                                    NavigationLink(destination: DetailView(talk: talk)) {
+                                        TalkContent(talk: talk)
                                     }
                                 }
                             }
@@ -44,11 +44,11 @@ struct WorkshopView: View {
                     }.listStyle(.plain)
                 } else {
                     List {
-                        ForEach(viewModel.schedule) { information in
-                            if Self.extractDate.string(from: information.startAt ?? Date.now) == "18/01/2022" {
+                        ForEach(viewModel.schedule) { talk in
+                            if Self.extractDate.string(from: talk.startAt ?? Date.now) == "18/01/2022" {
                                 VStack {
-                                    NavigationLink(destination: WorkshopDetailsView(title: information.title, startAt: information.startAt ?? Date.now, endAt: information.endAt ?? Date.now, talkDescription: information.talkDescription ?? "", activityName: information.activityName ?? "", speakers: information.speakers)) {
-                                        ListContent(title: information.title, speakers: information.speakers, startAt: information.startAt ?? Date.now, endAt: information.endAt ?? Date.now)
+                                    NavigationLink(destination: DetailView(talk: talk)) {
+                                        TalkContent(talk: talk)
                                     }
                                 }
                             }
